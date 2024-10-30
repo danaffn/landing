@@ -23,6 +23,11 @@ $(function () {
     $('.review__slider').slick('slickNext');
   })
 
+  $('.faq__link').on('click', function (e) {
+    e.preventDefault()
+    $(this).toggleClass('faq__link--active')
+    $(this).children('.faq__answer').slideToggle()
+  })
 
 
 });
