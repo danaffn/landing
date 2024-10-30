@@ -12,6 +12,10 @@
   }
 }
 
+address {
+  font-style: normal;
+}
+
 label,
 button,
 select,
@@ -1126,8 +1130,4 @@ summary,
   font-weight: 600;
   font-size: 18px;
   line-height: 175%;
-}
-
-address {
-  font-style: normal;
 }
