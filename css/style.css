@@ -602,9 +602,9 @@ summary,
   left: 318px;
   display: flex;
   flex-direction: column;
-  padding: 128px 80px 128px 61px;
+  padding: 0px 80px 0px 61px;
   align-items: flex-start;
-
+  justify-content: center;
 }
 
 .experience__heading {
@@ -629,6 +629,7 @@ summary,
 .experience__list {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .experience__list-item {}
@@ -679,9 +680,16 @@ summary,
   margin-bottom: 81.64px;
 }
 
-.brands__list {}
+.brands__list {
+  display: flex;
+  flex-direction: column;
+}
 
-.brands__list-item {}
+.brands__list-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .brands__img {
   opacity: 0.6;
@@ -1445,6 +1453,12 @@ summary,
   .process__title {
     font-size: 50px;
   }
+
+  /* ------------------------------------------------------ */
+
+  .brands__title {
+    font-size: 50px;
+  }
 }
 
 /* ==========================1100========================== */
@@ -1641,10 +1655,31 @@ summary,
   .process__steplist-desc {
     font-size: 16px;
   }
+
+  /* ------------------------------------------------------ */
+
+  .experience__rectangle {
+    width: 150%;
+    margin: 0 -15px;
+    position: relative;
+    left: 0;
+  }
+
+  .experience__img {
+    display: none;
+  }
+
+  .experience__title {
+    font-size: 46px;
+  }
+
+  .experience__desc {
+    font-size: 20px;
+  }
 }
 
-/* ==========================860=========================== */
-@media (max-width: 860px) {
+/* ==========================900=========================== */
+@media (max-width: 900px) {
   .about__title {
     font-size: 44px;
   }
@@ -1664,6 +1699,21 @@ summary,
     max-width: none;
     width: 100%;
   }
+
+  .process__content {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .experience__list-item {
+    margin-right: 30px;
+  }
+
+  .experience__list-item:last-child {
+    margin-right: 0;
+  }
 }
 
 
@@ -1680,8 +1730,30 @@ summary,
 
   /* ------------------------------------------------------ */
 
-  .process__title {
-    font-size: 32px;
+  .experience__heading {
+    font-size: 44px;
+  }
+
+  .experience__title {
+    font-size: 40px;
+  }
+
+  .experience__rectangle {
+    padding: 0 20px;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .brands__title {
+    font-size: 38px;
+  }
+
+  .brands__inner {
+    padding-top: 70px;
+  }
+
+  .brands__box {
+    margin: 10px 0 40px;
   }
 }
 
@@ -1694,23 +1766,22 @@ summary,
 
   /* ------------------------------------------------------ */
 
-  .process__title{
-    font-size: calc(32px - 10%);
+  .experience__heading {
+    font-size: 36px;
   }
-  .process__desc{
-    font-size: calc(16px - 10%);
+
+  .experience__rectangle {
+    height: 400px;
   }
-  .process__steplist-title{
-    font-size: calc(26px - 10%);
-  }
-  .process__steplist-desc{
-    font-size: calc(16px - 10%);
-  }
+
+  /* ------------------------------------------------------ */
+
+
 }
 
-/* ==========================450=========================== */
+/* ==========================500=========================== */
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .header__top {
     width: 100%;
   }
@@ -1763,17 +1834,36 @@ summary,
 
   /* ------------------------------------------------------- */
 
-  .process__title{
-    font-size: calc((32px - 10%) - 8%);
-  }
-  .process__desc{
-    font-size: calc((16px - 10%) - 8%);
+  .process__title {
+    font-size: 32px;
   }
   .process__steplist-title{
-    font-size: calc((26px - 10%) - 8%);
+    font-size: 22px;
   }
-  .process__steplist-desc{
-    font-size: calc((16px - 10%) - 8%);
+  .process__steps{
+    margin-left: 45px;
+  }
+  /* ------------------------------------------------------- */
+
+  .experience__list {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr;
+  }
+
+  .experience__list-item {
+    margin-right: 10px;
+  }
+
+  .experience__list-item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .experience__heading {
+    font-size: 30px;
+  }
+
+  .experience__rectangle {
+    height: 330px;
   }
 }
 
@@ -1787,4 +1877,11 @@ summary,
   .header__work-desc {
     font-size: 16px;
   }
+
+  /* -------------------------------------------------------- */
+  
+  .brands__title{
+    font-size: 30px;
+  }
+
 }
