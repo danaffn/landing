@@ -724,9 +724,8 @@ summary,
 .blog__body {}
 
 .blog__btn-list {
-  margin-top: 47px;
   display: flex;
-  margin-bottom: 46px;
+  margin: 47px 0;
 }
 
 .blog__btn-list-item {
@@ -826,7 +825,6 @@ summary,
   flex-direction: column;
   padding: 128px 0 159px;
   margin: auto 0;
-
 }
 
 .review-title {
@@ -847,10 +845,11 @@ summary,
 .review__slider {}
 
 .review__slide {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   margin-top: 76px;
   margin-bottom: 23px;
+  flex-wrap: nowrap;
 }
 
 .review-slider-block {
@@ -870,6 +869,7 @@ summary,
 
 .review__user {
   margin-bottom: 25px;
+  white-space: nowrap;
 }
 
 .review__user-pfp {
@@ -1431,6 +1431,27 @@ summary,
 /* -------------------------MEDIA-------------------------- */
 /* -------------------------MEDIA-------------------------- */
 
+/* ==========================1320========================== */
+@media (max-width: 1320px) {
+  .blog__list-item {
+    width: 350px;
+    margin-right: 10px;
+  }
+
+  .blog__post-img {
+    width: 350px;
+  }
+
+  .blog__list {
+    gap: 0;
+    justify-items: center;
+  }
+
+  .blog__post-title, .blog__post-desc, .blog__list-item {
+    max-width: none;
+  }
+}
+
 /* ==========================1200========================== */
 @media (max-width: 1200px) {
   .header__title {
@@ -1457,6 +1478,18 @@ summary,
   /* ------------------------------------------------------ */
 
   .brands__title {
+    font-size: 50px;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .blog__title {
+    font-size: 50px;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .review-title {
     font-size: 50px;
   }
 }
@@ -1585,6 +1618,21 @@ summary,
   .process__content {
     margin-right: 30px;
   }
+
+  /* ------------------------------------------------------ */
+
+  .blog__list-item {
+    width: 330px;
+    margin-right: 20px;
+  }
+
+  .blog__post-img {
+    width: 330px;
+  }
+
+  .blog__post-title {
+    font-size: 28px;
+  }
 }
 
 /* ==========================980=========================== */
@@ -1676,6 +1724,20 @@ summary,
   .experience__desc {
     font-size: 20px;
   }
+
+  /* ------------------------------------------------------ */
+
+  .blog__list {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  }
+
+  .blog__list-item, .blog__post-img {
+    width: 375px;
+  }
+
+  .blog__list-item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 /* ==========================900=========================== */
@@ -1713,6 +1775,17 @@ summary,
 
   .experience__list-item:last-child {
     margin-right: 0;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .review__slide {
+    flex-wrap: wrap;
+  }
+
+  .review-slider-block {
+    margin: 0 0 30px;
+    width: 100%;
   }
 }
 
@@ -1755,6 +1828,26 @@ summary,
   .brands__box {
     margin: 10px 0 40px;
   }
+
+  /* ------------------------------------------------------ */
+
+  .blog__list-item, .blog__post-img {
+    width: 290px;
+  }
+
+  .blog {
+    padding: 70px 0 72px;
+  }
+
+  .blog__btn-list {
+    margin: 30px 0;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .review-title {
+    font-size: 40px;
+  }
 }
 
 /* ==========================600=========================== */
@@ -1776,7 +1869,15 @@ summary,
 
   /* ------------------------------------------------------ */
 
+  .blog__list {
+    grid-template: repeat(6, 1fr) / 1fr;
+    padding: 0 15px;
+  }
 
+  .blog__list-item, .blog__post-img {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 /* ==========================500=========================== */
@@ -1837,12 +1938,15 @@ summary,
   .process__title {
     font-size: 32px;
   }
-  .process__steplist-title{
+
+  .process__steplist-title {
     font-size: 22px;
   }
-  .process__steps{
+
+  .process__steps {
     margin-left: 45px;
   }
+
   /* ------------------------------------------------------- */
 
   .experience__list {
@@ -1865,6 +1969,37 @@ summary,
   .experience__rectangle {
     height: 330px;
   }
+
+  /* ------------------------------------------------------- */
+
+  .blog__title {
+    font-size: 38px;
+  }
+
+  .blog__btn {
+    font-size: 28px;
+  }
+
+  .blog__btn-list-item {
+    margin-right: 25px;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .review-title {
+    font-size: 38px;
+  }
+
+  .review__prev {
+    left: 0;
+  }
+
+  .review__text {
+    font-size: 20px;
+  }
+  .review__user-name{
+    font-size: 20px;
+  }
 }
 
 /* ==========================380============================= */
@@ -1879,9 +2014,22 @@ summary,
   }
 
   /* -------------------------------------------------------- */
-  
-  .brands__title{
+
+  .brands__title {
     font-size: 30px;
   }
 
+  /* -------------------------------------------------------- */
+
+  .blog__post-title {
+    font-size: 26px;
+  }
+  /* -------------------------------------------------------- */
+
+  .review-title{
+    font-size: 30px;
+  }
+  .review__text{
+    font-size: 18px;
+  }
 }
