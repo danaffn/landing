@@ -45,7 +45,7 @@ $(function () {
   })
   setInterval(() => {
     if ($('.header__top').hasClass('header__top--open')) {
-      $('.header__nav-link').on('click', function (e) {
+      $('.header__nav-link, .header__logo').on('click', function (e) {
         $('.header__top').removeClass('header__top--open')
         $('.overlay').removeClass('overlay--show')
         $('.burger').removeClass('burger--close')
