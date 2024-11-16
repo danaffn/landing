@@ -662,8 +662,6 @@ summary,
   display: flex;
   flex-direction: column;
   margin: auto 0;
-  align-items: center;
-  justify-content: center;
   padding-top: 128px;
 }
 
@@ -681,19 +679,16 @@ summary,
 }
 
 .brands__list {
-  display: flex;
-  flex-direction: column;
-}
-
-.brands__list-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(5, auto);
+  align-items: center;
+  justify-items: center;
 }
 
 .brands__img {
   opacity: 0.6;
   transition: opacity .5s;
+  width: 100%;
 }
 
 .brands__img:hover {
@@ -1959,6 +1954,12 @@ summary,
 
   .experience__rectangle {
     height: 400px;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .brands__list {
+    grid-template: repeat(5, 1fr) / repeat(2, 1fr);
   }
 
   /* ------------------------------------------------------ */
